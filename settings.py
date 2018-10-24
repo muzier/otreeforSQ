@@ -101,7 +101,8 @@ ROOMS = [
 # for flexibility, you can set it in the environment variable OTREE_AUTH_LEVEL
 # AUTH_LEVEL = environ.get('OTREE_AUTH_LEVEL')
 
-AUTH_LEVEL = 'STUDY'
+AUTH_LEVEL = 'DEMO'
+DEBUG = (environ.get('OTREE_PRODUCTION') in {None, '', '0'})
 
 # environ['DATABASE_URL'] = 'postgres://postgres@localhost/django_db'
 
