@@ -1,0 +1,57 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block styles %}
+    <style>
+        .otree-timer {
+            display: none;
+            }
+        .otree-body {
+            max-width: 1000px
+        }
+        .page-header {
+            padding-top: 2px
+        }
+    </style>
+{% endblock%}
+
+{% block content %}
+
+    <div class="container-fluid">
+        <div class="card bg-light">
+        <h5 class="card-header bg-dark text-white text-center">指导语</h5>
+        <div class="card-body">
+            <p style="line-height:2">
+                <b>
+                    亲爱的同学：
+                    您好！本调查采用匿名方式，调查结果仅供科学研究之用。我们将对调查结果进行严格保密。
+                    答案没有对错之分，请你根据自己的真实情况进行填写，不必有任何顾虑。
+                    您的认真作答对我们非常重要，请尽量在不受其他干扰的情况下完成问卷。谢谢。
+                </b>
+            </p>
+            <p style="line-height:2">
+                本调查包含以下几个部分，每个部分之间相互独立：
+            </p>
+            <ul class="list-group">
+             <li class="list-group-item">1. 游戏规则学习</li>
+             <li class="list-group-item">2. 生活事件回忆</li>
+             <li class="list-group-item">3. 生活态度测量</li>
+             <li class="list-group-item">4. 互惠类型测量</li>
+             <li class="list-group-item">5. 正式角色游戏</li>
+             <li class="list-group-item">6. 人口学信息调查</li>
+            </ul>
+            <br/>
+            <p style="line-height:2">
+                每部分调查开始前，都会有详细的指导语告知您如何作答，请您务必认真阅读指导语。
+            </p>
+        </div>
+    </div>
+    </div>
+
+    <br/>
+
+    <div class="container-fluid">
+        <button class="otree-btn-next btn btn-primary btn-lg btn-block">进入调查</button>
+    </div>
+
+{% endblock %}

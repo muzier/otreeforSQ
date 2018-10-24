@@ -1,0 +1,48 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block styles %}
+    <style>
+        .otree-timer {
+            display: none;
+            }
+        .otree-body {
+            max-width: 1000px
+        }
+        .page-header {
+            padding-top: 2px
+        }
+    </style>
+{% endblock%}
+
+{% block content %}
+
+    <div class="container-fluid">
+        <div class="card bg-light mb-3">
+            <h5 class="card-header bg-dark text-white">
+                第三部分：请根据您的真实想法，评价您在多大程度上同意或不同意以下陈述。
+            </h5>
+            <div class="card-body">
+                <h6 class="card-title text-danger mb-4">
+                    1 表示完全不同意， 7表示完全同意， 同意程度随数字增大依次提高。答案没有对错之分。
+                </h6>
+
+                <table class="table">
+                    {% for field in form %}
+                        <tr>
+                            <th>{{ field.label }}</th>
+                            {% for choice in field %}
+                                <td>{{ choice }}</td>
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <button class="otree-btn-next btn btn-primary btn-lg btn-block">下一页</button>
+    </div>
+
+{% endblock %}

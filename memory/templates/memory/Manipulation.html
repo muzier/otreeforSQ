@@ -1,0 +1,60 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block styles %}
+    <style>
+        .otree-timer {
+            display: none;
+            }
+        .otree-body {
+            max-width: 1000px
+        }
+        .page-header {
+            padding-top: 2px
+        }
+    </style>
+{% endblock%}
+
+{% block content %}
+
+    <!--Set the introduction -->
+    <div class="container-fluid">
+        <div class="card bg-light mb-3">
+            <h5 class="card-header bg-dark text-white">
+                第二部分：请根据指导语回忆相应内容
+            </h5>
+            <div class="card-body">
+                <p class="card-text">
+                    请认真回忆，并简略描述<b>最近</b>发生在你身上的一个<u>事件</u>，在这个事件中，
+                    你感觉该事件的发生和发展<b><u>完全在你的计划之内，你感觉你拥有掌控感</u></b>。字数在100字以上。(至少思考2分钟)
+                </p>
+                <hr/>
+                <h4 class="card-text text-danger">
+                    请在发放的答题纸上写上相应的回忆内容！
+                </h4>
+                <br/>
+                <p class="card-text">
+                    书写完成后，请在页面上点击下一页按钮，继续后续任务。
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container-fluid">
+        <button id="submitButton" type="button" class="otree-btn-next btn btn-secondary btn-lg btn-block">下一页</button>
+    </div>
+
+    <script>
+        function changeButton(){
+            document.getElementById("submitButton").className = "otree-btn-next btn btn-primary btn-lg btn-block";
+            document.getElementById("submitButton").type = "";
+        };
+        var changeTime = setTimeout(function(){changeButton();},20000);
+        window.onload = function(){
+            changeTime;
+        };
+    </script>
+
+{% endblock %}

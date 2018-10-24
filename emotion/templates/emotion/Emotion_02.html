@@ -1,0 +1,48 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block styles %}
+    <style>
+        .otree-timer {
+            display: none;
+            }
+        .otree-body {
+            max-width: 1000px
+        }
+        .page-header {
+            padding-top: 2px
+        }
+    </style>
+{% endblock%}
+
+{% block content %}
+
+    <div class="container-fluid">
+        <div class="card bg-light mb-3">
+            <h5 class="card-header bg-dark text-white">
+                在<b><u>回忆上面一题的情境</u></b>时，请选择你所感受到的情绪状态和程度。
+            </h5>
+            <div class="card-body">
+                <h6 class="card-title text-danger mb-4">
+                    1代表很少或完全没有，7代表非常强烈，1到7表示强烈程度逐渐增加。
+                </h6>
+
+                <table class="table">
+                    {% for field in form %}
+                        <tr>
+                            <th>{{ field.label }}</th>
+                            {% for choice in field %}
+                                <td>{{ choice }}</td>
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <button class="otree-btn-next btn btn-primary btn-lg btn-block">下一页</button>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block styles %}
+    <style>
+        .otree-timer {
+            display: none;
+            }
+        .otree-body {
+            max-width: 1000px
+        }
+        .page-header {
+            padding-top: 2px
+        }
+    </style>
+{% endblock%}
+
+{% block content %}
+
+    <div class="container-fluid">
+        <div class="card bg-light mb-3">
+            <h6 class="card-header bg-dark text-white">
+                在回忆<b><u>上面一题的情境时</u></b>，请判断以下陈述是否符合你的情况。
+            </h6>
+            <div class="card-body">
+                <h6 class="card-title text-danger mb-4">
+                    1代表非常不符合，7代表非常符合，1至7表示符合的程度逐渐增加。
+                </h6>
+
+                <table class="table">
+                    {% for field in form %}
+                        <tr>
+                            <th>{{ field.label }}</th>
+                            {% for choice in field %}
+                                <td>{{ choice }}</td>
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <button class="otree-btn-next btn btn-primary btn-lg btn-block">下一页</button>
+    </div>
+
+{% endblock %}
