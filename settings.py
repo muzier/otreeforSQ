@@ -15,7 +15,7 @@ SESSION_CONFIGS = [
     {
         'name': 'BriberyGame',
         'display_name': "决策研究",
-        'num_demo_participants': 120,
+        'num_demo_participants': 180,
         'app_sequence': [
                          'introduction',
                          'briberyGame',
