@@ -23,5 +23,5 @@ RUN apk -U add --no-cache bash \
 WORKDIR /opt/otree
 VOLUME /opt/init
 ENTRYPOINT ["/entrypoint.sh"]
-CMD ["otree", "runprodserver", "8001"]
+CMD ["otree", "runprodserver", "80"]
 EXPOSE 80
