@@ -17,16 +17,16 @@ SESSION_CONFIGS = [
         'display_name': "决策研究",
         'num_demo_participants': 180,
         'app_sequence': [
-                         'introduction',
-                         'briberyGame',
+                         # 'introduction',
+                         # 'briberyGame',
                          'memory',
-                         'emotion',
+                         # 'emotion',
                          'construal',
                          # 'moralSense',
-                         'gameStart',
-                         'main',
-                         'demographic',
-                         'end',
+                         # 'gameStart',
+                         # 'main',
+                         # 'demographic',
+                         # 'end',
                          ]
     },
     # {
