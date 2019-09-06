@@ -16,7 +16,8 @@ Then, each participant complete the manipulation check items.
 
 class Constants(BaseConstants):
     name_in_url = 'memory'
-    players_per_group = 2
+    # players_per_group = 2
+    players_per_group = 3   #改为3类玩家，分别是高控制组、低控制组和对照组
     num_rounds = 1
 
 
@@ -31,8 +32,10 @@ class Group(BaseGroup):
 class Player(BasePlayer):
     def role(self):
         if self.id_in_group == 1:
-            return 'manipulation'
+            return 'high_manipulation'
         if self.id_in_group == 2:
+            return 'low_manipulation'
+        if self.id_in_group == 3:
             return 'control'
     # keyword_1 = models.StringField()
     # keyword_2 = models.StringField()

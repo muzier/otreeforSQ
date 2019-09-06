@@ -22,7 +22,7 @@ SESSION_CONFIGS = [
                          'memory',
                          'emotion',
                          'construal',
-                         'moralSense',
+                         # 'moralSense',
                          'gameStart',
                          'main',
                          'demographic',
